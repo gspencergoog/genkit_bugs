@@ -1,0 +1,13 @@
+diff --git a/node_modules/zod/lib/types.js b/node_modules/zod/lib/types.js
+index 731ffd8..86d5a14 100644
+--- a/node_modules/zod/lib/types.js
++++ b/node_modules/zod/lib/types.js
+@@ -1973,7 +1973,7 @@ class ZodObject extends ZodType {
+         this.augment = this.extend;
+     }
+     _getCached() {
+-        if (this._cached !== null)
++        if (this._cached != null)
+             return this._cached;
+         const shape = this._def.shape();
+         const keys = util_1.util.objectKeys(shape);

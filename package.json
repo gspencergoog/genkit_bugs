@@ -1,0 +1,30 @@
+{
+  "name": "generated-agent",
+  "version": "1.0.0",
+  "description": "A generated agentic flow",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node lib/index.js",
+    "genkit:dev": "genkit start -- tsx --watch src/index.ts",
+    "compile": "tsc",
+    "build": "npm run build:clean && npm run compile",
+    "build:clean": "rimraf ./lib",
+    "build:watch": "tsc --watch",
+    "build-and-run": "npm run build && node lib/index.js",
+    "postinstall": "patch-package"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@genkit-ai/googleai": "^1.0.0-rc.9",
+    "@genkit-ai/express": "^1.0.0-rc.9",
+    "genkit": "^1.0.0-rc.9",
+    "patch-package": "^8.0.0"
+  },
+  "devDependencies": {
+    "genkit-cli": "^1.0.0-rc.9",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.2"
+  }
+}

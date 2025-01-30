@@ -1,0 +1,15 @@
+---
+model: googleai/gemini-2.0-flash-exp
+config:
+  responseMimeType: application/json
+input:
+  schema: storyRankerInputSchema
+output:
+  schema: storyRankerOutputSchema
+---
+{{ role "system" }}
+Rank each of the stories provided by the user on a scale of 1 to 5, 5 being best. Return the stories along with their ranks.
+{{ role "user" }}
+{{#each stories}}
+{{this}}
+{{/each}}

@@ -1,0 +1,15 @@
+---
+model: googleai/gemini-2.0-flash-exp
+config:
+  responseMimeType: application/json
+input:
+  schema: storyGeneratorInputSchema
+output:
+  schema: storyGeneratorOutputSchema
+---
+{{ role "system" }}
+Write a two-paragraph story for each of the character names provided by the user.
+{{ role "user" }}
+{{#each names}}
+{{this}}
+{{/each}}
