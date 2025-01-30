@@ -1,0 +1,41 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": [
+        {
+          "text": "\nWrite a two-paragraph story for each of the character names provided by the user.\n"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "\nGreg\nPaul\n"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "responseMimeType": "application/json"
+  },
+  "tools": [],
+  "output": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "stories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The generated stories, one for each character name."
+        }
+      },
+      "required": ["stories"],
+      "additionalProperties": true,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  }
+}
