@@ -17,13 +17,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@genkit-ai/googleai": "^1.0.0-rc.9",
-    "@genkit-ai/express": "^1.0.0-rc.9",
-    "genkit": "^1.0.0-rc.9",
+    "@genkit-ai/googleai": "^1.0.0-rc.11",
+    "@genkit-ai/express": "^1.0.0-rc.11",
+    "genkit": "^1.0.0-rc.11",
     "patch-package": "^8.0.0"
   },
   "devDependencies": {
-    "genkit-cli": "^1.0.0-rc.9",
+    "genkit-cli": "^1.0.0-rc.11",
     "rimraf": "^6.0.1",
     "typescript": "^5.5.2"
   }
